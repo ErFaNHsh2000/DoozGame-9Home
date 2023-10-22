@@ -1,0 +1,156 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Kleader', sans-serif;
+    z-index: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    width: 100vw;
+    height: 92vh;
+}
+
+.MessageBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: -100;
+}
+.MessageBox.active{
+    z-index: 1;
+}
+
+.SeccessBox{
+    border-radius: 10px;
+    font-size: 36px;
+    opacity: 0.5;
+    z-index: 1;
+    transform: translateY(-100vw);
+    transition: transform 0.5s ease, opacity 0.3s linear;
+}
+
+.shadow{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.3s linear;
+}
+
+.MessageBox.active .SeccessBox{
+    transform: none;
+    opacity: 1;
+}
+
+.MessageBox.active .shadow{
+    opacity: 0.5;
+}
+
+#board-game{
+    position: absolute;
+    top: 5rem;
+    z-index: -1;
+}
+
+#mainbtn{
+    height: auto;
+    font-size: 2vmax;
+    background-color: #00c6ff;
+    border: 1px solid #00c6ff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    letter-spacing: 1rem;
+}
+
+#collapseExample{
+    background-color: #00c8ff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.btn{
+    color: #ffffff;
+}
+
+#input-group-btn{
+    height: 35vmax;
+    border: 3px solid #0000ff;
+    border-radius: 20px;
+}
+
+#score-bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 10%;
+}
+
+#input-group-btn button{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #00c6ff55;
+    
+}
+
+.top-left{
+    border-top-left-radius: 15px;
+}
+.top-right{
+    border-top-right-radius: 15px;
+}
+.bottom-left{
+    border-bottom-left-radius: 15px;
+}
+.bottom-right{
+    border-bottom-right-radius: 15px;
+}
+
+#input-group-btn button:hover{
+    background-color: rgba(0, 198, 255, 0.6);
+}
+
+.playerscore{
+    background-color: #00c8ff55;
+    color: #ffffff;
+    /* box-shadow: 0 0 20px #ff000099;
+    border: 1px solid #ff0000cc; */
+    letter-spacing: 7px;
+}
+.bi-circle{
+    color: #FF0000;
+}
+.bi-x-lg{
+    color: #0000ff;
+}
+
+.btn-close{
+    right: 1rem;
+}
+
+.offcanvas-backdrop{
+    display: none;
+}
+
+@media only screen and (max-width:992px){
+    .playerscore{
+        font-size: 2rem;
+    }
+    #input-group-btn{
+        height: 400px;
+    }
+}
